@@ -1,4 +1,5 @@
 {% extends "base.jinja" %}
+
 {% block title %}Index{% endblock %}
 
 {% block head %}
@@ -8,9 +9,14 @@
     </style>
 {% endblock %}
 
+
 {% block content %}
-    <h1>Index</h1>
-    <p class="important">
-      Welcome to my awesome homepage.
-    </p>
+  <button id="start">
+      Start Recording
+    </button>
+    <button id="stop" disabled>
+      Stop Recording
+    </button>
+    <video autoplay />
+    <script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
 {% endblock %}
